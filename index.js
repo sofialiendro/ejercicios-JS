@@ -1,33 +1,37 @@
-// let nombre = prompt("Decime tu nombre.")
-// let apellido = prompt("Decime tu apellido.")
-// let nombreCompleto = (nombre + " " + apellido)
+// Ejercicio 6
+
+let gritar = (str) => {
+    return `¡${str}!`
+}
+
+console.log(gritar("Hola"))
+
 
 // Ejercicio 7
 
 const obtenerNombreCompleto = (nombre, apellido) => {
-    alert(nombre + " " + apellido)
+    return `${nombre} ${apellido}`
 }
 
-const nombreCompleto = obtenerNombreCompleto("Sofía", "Liendro")
+console.log(obtenerNombreCompleto("Sofía", "Liendro"))
+
 
 // Ejercicio 8
 
-const saludar = () => {
-    alert(`Hola, ${nombreCompleto}. Un gusto conocerte.`)
+let saludar = (nombre) => {
+    return `Hola, ${nombre}, un gusto conocerte`
 }
 
-saludar()
-const saludo = saludar(nombreCompleto)
+console.log(saludar("Sofía"))
+
 
 // Ejercicio 9
 
-const saludarGritando = () => {
-    alert(`¡${saludo}!`)
+let saludarGritando = (nombre, apellido) => {
+    let nombreCompleto = obtenerNombreCompleto(nombre, apellido)
+    let saludo = saludar(nombreCompleto)
+    let grito = gritar(saludo)
+    return grito
 }
 
-saludarGritando()
-
-
-
-
-
+console.log(saludarGritando("Vicky", "Liendro"))
